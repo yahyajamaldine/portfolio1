@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Yahya Portfolio</title>
+    <meta name="viewport" content="width=device-width, initiale-width=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link href="layout.css" rel="stylesheet" />
+    <style type="text/CSS">
+        /*part of main*/
+          .description{
+    grid-row:2;
+    grid-column: 1/6;
+    display: flex;
+    /*we have flex wrap so in samall device
+    we want the the second elements that 
+    hold vectors to swap verticaly instead of horizontely*/
+    flex-wrap: wrap;
+}
+ .desc__area{
+flex: 1 1 max(30ch,90%);
+height:37.5rem;
+background: hsla(360, 100%, 100%, 0.70);
+border-radius: 20px;
+margin: 1rem 1rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap:30px;
+}
+.desc__area p{
+    font-family: 'Concert One', cursive;
+text-transform: uppercase;
+font-size: 5ch;
+animation: moveletters 1.75s linear infinite both;
+}
+.desc__area img{
+    width:20rem;
+    height: 15rem;
+    animation: movesvg 3s linear infinite backwards;
+}
+@keyframes moveletters {
+    20%{
+        letter-spacing:0.02em;
+    }
+    50%{
+        letter-spacing:0.05em;
+    }
+    100%{
+        letter-spacing:0.0em;
+    }
+    
+}
+@keyframes movesvg {
+   
+    10%{
+      transform: translateY(20px);
+    }
+    50%{
+        transform: translateY(-60px);
+
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
+
+        </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="slid_menu">
+            <span class="menu_icon_close">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 496.096 496.096" style="enable-background:new 0 0 496.096 496.096;" xml:space="preserve">
+           <g>
+               <g>
+                   <path d="M259.41,247.998L493.754,13.654c3.123-3.124,3.123-8.188,0-11.312c-3.124-3.123-8.188-3.123-11.312,0L248.098,236.686
+                       L13.754,2.342C10.576-0.727,5.512-0.639,2.442,2.539c-2.994,3.1-2.994,8.015,0,11.115l234.344,234.344L2.442,482.342
+                       c-3.178,3.07-3.266,8.134-0.196,11.312s8.134,3.266,11.312,0.196c0.067-0.064,0.132-0.13,0.196-0.196L248.098,259.31
+                       l234.344,234.344c3.178,3.07,8.242,2.982,11.312-0.196c2.995-3.1,2.995-8.016,0-11.116L259.41,247.998z"/>
+               </g>
+           </g>
+           </svg>
+                </span>
+            <ul class="slid_menu_list">
+                <li class="slid_menu_item" onclick="location.href='/index.html'">Home</li>
+                <li class="slid_menu_item" onclick="location.href='/About.html'">About</li>
+                <li class="slid_menu_item" onclick="location.href='/work.html'">Work</li>
+                <li class="slid_menu_item" onclick="location.href='/blogs.html'">Blogs</li>
+            </ul>
+            <p class="attributte">Icons designed By <a href="https://www.flaticon.com/authors/xnimrodx">xnimrodx</a> and <a href="https://www.flaticon.com/authors/xnimrodx">Pixel perfect</a>.</p>
+        </div>
+        <header>
+            <img class="header_logo" src="images/Yahya jamaldine.svg" alt="logo of Portfolio" />
+            <nav class="header_nav">
+                <a href="./index.html">Home</a>
+                  <a href="./About.html">About</a>
+                  <a href="./work.html">Work</a>
+                <a href="./blogs.html">Blogs</a>
+                <span class="menu_icon_open">
+                    <svg class="menu_svg" width="30" height="30" viewBox="0 -53 384 384" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
+                        <path d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
+                        <path d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
+                    </svg>
+                </span>
+            </nav>
+        </header>
+
+        <main class="description">
+          <div class="desc__area">
+             <p>Coming soon</p>
+             <img class="mysvg" src="images/character 24.svg" />
+          </div>
+        </main>
+        <footer>
+            <div class="footer_desc_container">
+                <p class="footer_desc">Developed by Yahya Jamaldine</p>
+            </div>
+            <div class="footer_nav">
+                <img src="images/logo/iconmonstr-twitter-3 (1) 1.svg" alt="Twitter-logo">
+                <img src="images/logo/iconmonstr-github-1.svg" alt="Github-logo">
+                <img src="images/logo/iconmonstr-linkedin-4.svg" alt="Linkdin-logo">
+                <img src="images/logo/iconmonstr-medium-4.svg" alt="Medium-logo">
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript">
+        const openButton=document.querySelector('.menu_icon_open');
+       const closeButton=document.querySelector('.menu_icon_close >svg')
+         const menu=document.querySelector('.slid_menu');
+       openButton.addEventListener('click',()=>{menu.classList.toggle('slide_menu_closer')});
+      closeButton.addEventListener('click',()=>{menu.classList.toggle('slide_menu_closer')});
+        </script>
+</body>
+
+</html>

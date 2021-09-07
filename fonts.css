@@ -1,0 +1,5 @@
+/*So we have some fonts here to use*/
+@font-face {
+    font-family:'Roboto Condensed';
+    src: url("./fonts/RobotoCondensed-Regular.ttf");
+}

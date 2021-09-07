@@ -1,0 +1,304 @@
+@import url("fonts.css");
+*,*::before,*::after{
+box-sizing: border-box;
+}
+:root{
+    --light-color:#FFFDFD;
+    --header-black-color:#1C1A1A;
+    --scrollbarBG: #72b8cf;
+    --thumbBG: #0d0d0e;
+    --laker-font:'Leckerli One';
+
+}
+body{
+    margin: 0; 
+    overflow-x: hidden;
+    
+}
+.container{
+       background: url("images/polina-rytova-1dGMs4hhcVA-unsplash_c.jpg") no-repeat;
+       background-size: cover;
+       display: grid;
+       grid-template-columns:repeat(5,minmax(1rem,20rem));
+       grid-template-rows: .5fr 3fr;
+       height:max(100vh,fit-content);
+     
+   }
+   
+  header{
+      background-color:hsla(360, 100%, 100%, 0.58);
+      height: 3.5rem;
+      width:100vw;
+      grid-row-start: 1;
+      grid-column: 1/6;
+      display: grid;
+      align-items: center;
+      z-index: 1;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+      position: fixed;
+  }
+  header:hover{
+    background-color:hsla(360, 100%, 100%, 0.70);
+    cursor:pointer;
+  }
+  .header_nav{
+      grid-column-start: 3;
+      grid-column-end: 5;
+      justify-self: end;
+      margin-right: 8rem;
+   }
+  .header_nav a:link{
+     color:var(--light-color);
+     font-family: 'Roboto Condensed';
+     font-style: normal;
+     font-size: 1.25rem;
+     font-weight: 600;
+     line-height: 1.75rem;
+     letter-spacing: 0.05em;
+     margin-right: 2rem;
+     text-decoration: none;
+     text-shadow: 4px 10px 10px rgba(0, 0, 0, 0.25);
+  }
+  .header_nav a:link:nth-child(odd){
+    color:var(--header-black-color);
+    
+}
+  .header_nav a:visited{
+     color:var(--light-color);
+  }
+  .header_nav a:visited:nth-child(odd){
+    color:var(--header-black-color);
+}
+  .header_nav a:hover{
+     text-decoration:underline;
+     cursor:pointer;
+     position: relative;
+     bottom:4px;
+     padding-right: 1rem;
+     font-size: 1.5rem;
+     font-weight: 900;
+     transition: all .6s ;
+  }
+  
+  
+  .header_logo{
+      grid-column-start: 1;
+      padding-left: 1.5rem;
+      margin-top: .5rem;
+      width: 220px;
+  }
+/*here wi'll use our menu bar*/
+.menu_icon_open{
+  width: 35px;
+  height: 35px;
+  display: none;
+  margin-right: 30px;
+
+}
+.menu_svg{
+transform: translateY(2.5px);
+}
+.menu_svg:hover{
+  cursor: pointer;
+  fill:aliceblue
+}
+
+.slid_menu{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: none;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color:rgb(224, 161, 73,0.98);
+  transform: translateX(-100%);
+  transition: all 400ms linear;
+  opacity: 0.50;
+  
+}
+.slide_menu_closer{
+ transform: translateX(0);
+ opacity: 1;
+}
+.menu_icon_close{
+  display: inline;
+  width: 100%;
+}
+.menu_icon_close >svg{
+  
+  transform: translateY(10px) translateX(-24px);
+ float: right;
+ width:28px;
+  height: 28px;   
+}
+.menu_icon_close >svg:hover{
+  cursor: pointer;
+  fill:aliceblue
+}
+.slid_menu_list{
+padding-top: 60px;
+list-style: none;
+  width: 100%;
+  transform: translateX(-20px);
+}
+.slid_menu_list>*{
+  font-size: 1.5rem;
+  text-align: center;
+  height: 25%;
+  font-family: 'Concert One', cursive;
+  background-color: aliceblue;
+  margin-bottom: 8.5px;
+  padding-top: 8px;
+  border-radius: 5px;
+}
+.slid_menu_list>*:hover{
+ outline: 3.5px rgb(14, 15, 17) solid;
+ cursor: pointer;
+}
+.slid_menu_list>*:nth-child(even){
+  color:white;
+  background-color: black;
+  outline-color: white;
+}
+.attributte{
+  color: gainsboro;
+  font-size: 1em;
+  padding-top: 10px;
+ padding-left: 25px;
+}
+.attributte a{
+ text-decoration: none;
+ color: black;
+}
+.attributte a:hover{
+ text-decoration: underline;
+}
+.attributte{
+ width: 100%;
+ height: 100%;
+align-self: flex-end;
+}
+
+/******menu CSS/
+   /*This part need to be fixed, please fix thd div by using a signle
+          div and make it flex*/
+          footer{
+              display: grid;
+              grid-row:3;
+              grid-column: 1/6;
+              background-color:hsla(360, 100%, 100%, 0.58);
+              height: 3.25rem;
+              width: 100vw;
+          }
+          .footer_desc_container{
+              display: flex;
+              align-items: center;
+          }
+         .footer_desc{
+            font-family: 'Roboto Condensed';
+            font-weight: 900;
+            color:var(--header-black-color);
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            letter-spacing: 0.02em;
+            transform: translateX(2rem);
+            transition: 1.5s background linear;
+         }
+         .footer_desc:hover{
+           cursor: pointer;
+           color: white;
+         }
+          .footer_nav{
+              grid-column:5/6;
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              mix-blend-mode: normal;
+              transition: 1s all linear;
+              margin-right: 10px;
+      
+          }           
+          .footer_nav img{
+            height: 2.25rem;
+              border-radius: 20px;
+              margin-right: 2rem;
+              background-color: var(--light-color);
+          }
+        .footer_nav img:nth-child(3){
+              height: 2.30rem;
+          }
+          .footer_nav>img:hover{
+              cursor: pointer;
+              height: 2.25rem;
+              background-color: none;        
+             background-size: contain;
+             transform: rotate(360deg);
+             transition: all 2s ;
+          }
+     /**common css**/
+
+     @media (max-width:360px) {
+      body{
+          overflow-x: scroll;
+          width: 415px;
+      }
+      header,footer{
+          width: 100%;
+      }
+      
+  }  
+
+
+@media (max-width:769px) {
+  .header_nav{
+   
+    margin-right: 0;
+ }         
+ }
+@media  (max-width:660px) {
+   header{
+      background-color:hsla(360, 100%, 100%,1);
+   }
+  .header_nav>a{
+      display: none;
+  }
+  .menu_icon_open{
+      display:inline;
+  }
+  .slid_menu{
+      display: flex;
+  }
+.desc__main>p{
+  font-size: 4.5ch;
+}
+
+.slider__intro_para{
+  margin-left: 3%;
+ padding: 5%;
+ font-size:2ch;
+}
+.footer_desc{
+         position: fixed;
+         writing-mode: vertical-rl;
+         left: -15px;
+          top: 4rem;
+          color: rgb(0, 0, 0);
+          background:hsl(41, 81%, 51%);
+          transform: translateX(0rem) rotate(180deg);
+          padding: 1.25em 0.06em;
+          border-radius: 8px;
+       }
+}
+@media(max-width:620px) {
+  .footer_nav{
+    justify-content: flex-start;
+      transform: translateX(-16%);}
+}
+@media (max-width:376px) {
+  body,header,footer{
+   width:415px;
+   overflow-x: scroll;
+}
+}
+    /***end***/

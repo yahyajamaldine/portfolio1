@@ -1,0 +1,95 @@
+.description{
+    grid-row:2;
+    grid-column: 1/6;
+    display: flex;
+    /*we have flex wrap so in samall device
+    we want the the second elements that 
+    hold vectors to swap verticaly instead of horizontely*/
+    flex-wrap: wrap;
+}
+.desc__area{
+flex: 1 1 max(30rem,70%);
+height:40rem;
+}
+.desc__main{
+background-color: hsla(360, 100%, 100%, 0.70);
+width: 90%;
+height: 90%;
+margin: 3% 5% 5% 5%;
+border-radius: 4rem;
+display: grid;
+grid-template-rows: 1.5fr 1.5fr 1fr;
+}
+.desc__main>p{
+font-family: 'Concert One', cursive;
+text-transform: uppercase;
+font-size: clamp(5ch,2.5rem,5.5ch);
+padding-left: 2rem;
+padding-right: .25rem;
+}
+.slider{
+display: grid;
+grid-template:100%/.5fr 3fr .5fr;
+}
+.slider >img{
+align-self: center;
+width: min(90%,4rem);
+opacity: 0.50;
+}
+.slider >img:last-child{
+transform: rotate(180deg);
+justify-self: end;
+}
+.slider>img:hover{
+cursor: pointer;
+opacity: 1;
+scale: 0.95;
+transition: all 200ms linear;
+}
+
+.slider__intro{
+width: 100%;
+height: 80%;
+background-color: white;
+transform: translateY(-40px);
+border-radius: 41px;
+font-size:3ch;
+font-family: 'Roboto Condensed';;
+text-align: center;
+padding:2rem 2rem;
+text-transform: uppercase;
+color: rgb(78, 78, 78);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.slider_number{
+display: flex;
+justify-self: center;
+align-items: center;
+grid-column: 2;
+width: 50%;
+height: 2rem;
+background-color:white;
+list-style: none;
+
+}
+.slider_number>*{
+margin-left: 2rem;
+height: 10px;
+width: 10px;
+background-color: #DCCDCD;
+}
+
+
+.desc__vector{
+flex: 1 1 max(10rem,30%);
+height: 40rem;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+background-color: aqua;
+}
+.desc__vector div{
+height: 40%;
+margin-left: 10%;
+width: 80%;
+}
