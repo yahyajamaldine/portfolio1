@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initiale-width=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
-    <link href="layout.css" rel="stylesheet" />
     <style type="text/CSS">
         /*part of main*/
           .description{
@@ -19,9 +18,10 @@
     hold vectors to swap verticaly instead of horizontely*/
     flex-wrap: wrap;
 }
+          
  .desc__area{
 flex: 1 1 max(30ch,90%);
-height:37.5rem;
+height:35rem;
 background: hsla(360, 100%, 100%, 0.70);
 border-radius: 20px;
 margin: 1rem 1rem;
@@ -41,6 +41,33 @@ animation: moveletters 1.75s linear infinite both;
     width:20rem;
     height: 15rem;
     animation: movesvg 3s linear infinite backwards;
+}
+.desc_button{
+    height: 36px;
+    font-size: 1.25rem;
+    width: 350px;
+    color:white;
+    font-family: 'Concert One', cursive;
+    background-color: black;
+    border-radius:15px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.desc_button:hover{
+    border: 1px solid white;
+    cursor: pointer;
+}
+.modal_desc{
+  font-size: 1.75ch;
+  margin-top: 25px;
+}
+a.account{
+    color:#D19342;
+}
+a.account:hover{
+    cursor: pointer;
+    color: #947854;
+
 }
 @keyframes moveletters {
     20%{
@@ -67,10 +94,25 @@ animation: moveletters 1.75s linear infinite both;
         transform: translateY(0px);
     }
 }
-
-
+@media (max-width:385px) {
+    .desc_button{
+      width:320px;
+      font-size: 1rem;
+    }
+}
+@media (min-height:740px) {
+    .description{
+       height: 100vh;
+    }
+}
+@media (max-width:1031px) {
+    .modal_desc{
+  font-size: 1.5ch;
+}
+}
 
         </style>
+            <link href="layout.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -97,13 +139,38 @@ animation: moveletters 1.75s linear infinite both;
             </ul>
             <p class="attributte">Icons designed By <a href="https://www.flaticon.com/authors/xnimrodx">xnimrodx</a> and <a href="https://www.flaticon.com/authors/xnimrodx">Pixel perfect</a>.</p>
         </div>
+        <div class="modal_container">
+            <section class="modal">
+              <div class="close_modal">
+                <span class="close_modal_container">
+                    <svg version="1.1" id="Capa_1" width="25" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 496.096 496.096" xml:space="preserve">
+               <g>
+                   <g>
+                       <path d="M259.41,247.998L493.754,13.654c3.123-3.124,3.123-8.188,0-11.312c-3.124-3.123-8.188-3.123-11.312,0L248.098,236.686
+                           L13.754,2.342C10.576-0.727,5.512-0.639,2.442,2.539c-2.994,3.1-2.994,8.015,0,11.115l234.344,234.344L2.442,482.342
+                           c-3.178,3.07-3.266,8.134-0.196,11.312s8.134,3.266,11.312,0.196c0.067-0.064,0.132-0.13,0.196-0.196L248.098,259.31
+                           l234.344,234.344c3.178,3.07,8.242,2.982,11.312-0.196c2.995-3.1,2.995-8.016,0-11.116L259.41,247.998z"/>
+                   </g>
+               </g>
+               </svg>
+                  </span>
+              </div>
+              <p class="modal_desc">
+                OHH! 🙃🙃🙃🙃🙃🙃🙃 THIS PAGE WILL CONTAINS ALL BLOG POSTS THAT I'VE PUBLISHED on 
+                MY <a class="account" href="https://yahyajamaldine.medium.com/">Medium </a>.ACCOUNT, THERE'S NO POINT FROM COPYING THE CONTENT OF EACH BLOG
+                 POST MANUALLY(I'm NOT A DEVELOPER THEN) INSTEAD I'll FETCH ALL BLOG 
+                 POST USING THE REST API OF <a class="account" href="https://yahyajamaldine.medium.com/">Medium</a>.
+                </p>
+            </section>
+            </div>
         <header>
             <img class="header_logo" src="images/Yahya jamaldine.svg" alt="logo of Portfolio" />
             <nav class="header_nav">
-                <a href="./index.html">Home</a>
-                  <a href="./About.html">About</a>
-                  <a href="./work.html">Work</a>
-                <a href="./blogs.html">Blogs</a>
+                <a id="home" href="./index.html">Home</a>
+                <a id="about" href="./About.html">About</a>
+                <a id="work" href="./work.html">Work</a>
+              <a id="blog" href="./blogs.html">Blogs</a>
                 <span class="menu_icon_open">
                     <svg class="menu_svg" width="30" height="30" viewBox="0 -53 384 384" xmlns="http://www.w3.org/2000/svg">
                         <path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
@@ -118,6 +185,7 @@ animation: moveletters 1.75s linear infinite both;
           <div class="desc__area">
              <p>Coming soon</p>
              <img class="mysvg" src="images/character 24.svg" />
+             <button class="desc_button">What you are going to build YAHYA ? </button>
           </div>
         </main>
         <footer>
@@ -133,11 +201,22 @@ animation: moveletters 1.75s linear infinite both;
         </footer>
     </div>
     <script type="text/javascript">
-        const openButton=document.querySelector('.menu_icon_open');
+          const openButton=document.querySelector('.menu_icon_open');
        const closeButton=document.querySelector('.menu_icon_close >svg')
          const menu=document.querySelector('.slid_menu');
        openButton.addEventListener('click',()=>{menu.classList.toggle('slide_menu_closer')});
       closeButton.addEventListener('click',()=>{menu.classList.toggle('slide_menu_closer')});
+      const showbuttom=document.querySelector('.desc_button');
+      const close_button=document.querySelector('.close_modal_container');
+      const modal=document.querySelector('.modal_container');
+      const modalwindow=document.querySelector('.modal'); 
+     showbuttom.addEventListener('click',()=>{
+      [modal,modalwindow].map(item=>item.classList.toggle('modal_closer'));
+    });
+
+      close_button.addEventListener('click',()=>{
+  [modal,modalwindow].map(item=>item.classList.toggle('modal_closer'));
+    });
         </script>
 </body>
 

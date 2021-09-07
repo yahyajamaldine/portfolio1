@@ -1,5 +1,5 @@
 onload=()=>{
-    let item_count=0;
+let item_count=0;
    const slider_intro=document.querySelector('.slider__intro');
    const slider_intro_paraSize=slider_intro.querySelector('.slider__intro_para').clientWidth;
    const slider_intro_paraItems=slider_intro.querySelectorAll('.slider__intro_para');
@@ -27,9 +27,45 @@ onload=()=>{
           leftarrow.setAttribute('disabled',true);
         }
       }
- const openButton=document.querySelector('.menu_icon_open');
-const closeButton=document.querySelector('.menu_icon_close >svg')
-const menu=document.querySelector('.slid_menu');
-openButton.addEventListener('click',()=>{menu.classList.toggle('slide_menu_closer')});
-closeButton.addEventListener('click',()=>{menu.classList.toggle('slide_menu_closer')});
-    }
+  /***
+   * This is where we are going to control the modal of resume
+   */
+   const arrow_down=document.querySelector('.arrow_download');
+   const close_button=document.querySelector('.close_modal_container');
+   const modal=document.querySelector('.modal_container');
+   const modalwindow=document.querySelector('.modal');
+  arrow_down.addEventListener('click',()=>{
+    [modal,modalwindow].map(item=>item.classList.toggle('modal_closer'));
+  });
+  close_button.addEventListener('click',()=>{
+    [modal,modalwindow].map(item=>item.classList.toggle('modal_closer'));
+  })
+/********** */
+/***Here we are going to give the user the desired resume language *
+ * */
+  const download_resume=document.querySelector('.download');
+   download_resume.addEventListener('click',()=>{
+      const languages=document.getElementsByName('language');
+         const language= [...languages].find(item=>item.checked);
+         if(language){
+          const link=language.value=="french"
+          ?'https://drive.google.com/file/d/1tMvoYDJ-mrhKn9UZ9BjiUQ_-k2Hn8NdA/view?usp=sharing'
+          :'https://drive.google.com/file/d/1n-xmEFw1bmBwpS0HcfvGzFqwchejjZwf/view?usp=sharing';
+          window.open(link);
+          [modal,modalwindow].map(item=>item.classList.toggle('modal_closer'));
+         }
+         else{
+          alert('Please select a language or leave'); 
+         }
+        });
+/**
+ * controlling the submiting of the form
+ */
+const my_form=document.getElementById('my_form');
+    my_form.addEventListener("submit",function(event){
+    event.preventDefault()
+     const va=document.querySelector(".inputemail").value;
+     alert("Thank you");
+
+    });
+}

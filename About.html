@@ -26,6 +26,7 @@ height:40rem;
 .desc__main{
 background-color: hsla(360, 100%, 100%, 0.70);
 color: rgb(59, 59, 57);
+/****some changes here*/
 width: 90%;
 height: 90%;
 margin: 3% 5% 5% 5%;
@@ -85,19 +86,39 @@ overflow: hidden;
 .slider__intro_para{
     font-family: 'Concert One', cursive;
    text-align: center;
+   line-height: clamp(1ch,1.25rem,1.75rem);
      padding:2.5rem;
     text-transform: uppercase;
    color: rgb(255, 255, 255);
    font-size:2.25ch;
     scroll-snap-align: center;
-    background-color: rgb(162, 167, 167);
+    background-color: rgb(120, 121, 121);
     padding-inline: 2rem;
     border-radius: 15px;
     min-width: 95%;
     min-height: 70%;
     margin-right: 50%;
     margin-left: 2.75%;
-
+}
+a{
+    text-decoration: none;
+}
+a.twitter{
+    color:#00acee;
+    padding-right: 2px;
+}
+a.linkdin{
+    padding-right: 2px;
+    color:#455e7e;
+}
+a[href^="mailto"]{
+ font-size: 1rem;
+ color: #f5a741;
+ letter-spacing: 0.04em;
+}
+a:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 .slider_number_co{
     grid-row:3;
@@ -226,6 +247,208 @@ width: 90%;
         height: 20rem;
     }
  }
+
+ .contact{
+     grid-row: 3;
+     grid-column: 1/6;
+     width: 100%;
+     display: flex;
+    /*we have flex wrap so in samall device
+    we want the the second elements that 
+    hold vectors to swap verticaly instead of horizontely*/
+    flex-wrap: wrap;
+ }
+ .contact_form, .contact_form form {
+width: 90%;
+height: 90%;
+margin: 3% 5% 5% 5%;
+border-radius: 4rem;
+ }
+ .contact_form{
+    transform: translateX(-34px);
+ }
+ .contact_form{
+ flex: 1 1 max(30ch,46%);
+    background-color: hsla(360, 100%, 100%, 0.70);
+color: rgb(59, 59, 57);
+ }
+ .form_desc{
+     align-self: center;
+     font-family: 'Concert One', cursive;
+     font-size: 1.5rem;
+     text-transform: uppercase;
+     background-color: #78cf4c;
+      background-image: linear-gradient(319deg, #7ac555 20%, #ffec99 50%, #ff9999 100%);
+     -moz-background-clip: text;
+     -webkit-background-clip: text;
+     background-clip: text;
+     color: transparent;
+    }
+ /***here***/
+ .Feedsvg_holder{
+    flex:1 1 max(10ch,15%);
+   display: flex;
+   justify-content: center;
+   
+ }
+ .Feedsvg_holder div{
+     display: flex;
+     flex-direction: column;
+    align-items: center;
+    transform: translateX(-50px);
+ height: 80%;
+width: 90%;
+ }
+ .my_damn_image{
+    width: 210px;
+   height: 210px;
+   border-radius: 122px;
+   z-index: 1;
+   animation: imagemove 3s infinite linear;
+ }
+ .my_damn_image:hover{
+   cursor: pointer;
+   animation-play-state: paused;
+ }
+ .svg_holder_cirle{
+     background-color: aliceblue;
+     border-radius: 180px;
+     height:210px ;
+     width: 200px;
+     transform: translateY(180px) rotateX(-65deg);
+     z-index: 1;
+     animation: opmove 3s infinite linear;
+ }
+ .contact_svg{
+    width: 22rem;
+   height: 22rem;
+   transform: translateY(-70px);
+ }
+
+ /***/
+ form{
+    background-color: hsla(360, 100%, 100%,1);
+     display: flex;
+     flex-direction: column;
+     padding: 5% 5% 5% 5%;
+ }
+ .group label{
+     font-size: 1.25rem;
+     font-family: 'Concert One', cursive;
+ }
+ .group{
+    margin-bottom: 20px;
+    display: flex;
+ }
+ .group input, textarea{
+     border: 3px black solid;
+     border-radius: 10px;
+ }
+ input::-moz-placeholder ,textarea::-moz-placeholder{
+    font-size: 1rem;
+     font-family: 'Concert One', cursive; }
+ input::placeholder, textarea::placeholder{
+    font-size: 1rem;
+     font-family: 'Concert One', cursive;
+     color: rgb(194, 194, 194);
+ }
+ .group .inputname{
+     width: 40%;
+     height: 2.5rem;
+     margin-left: 33px;
+ }
+ .group .inputemail{
+     width: 50%;
+     height: 2.5rem;
+     margin-left: 34px;
+ }
+ .group .inputmessage{
+   margin-left: 10px;
+   width: 80%;
+   max-width: 38rem;
+   max-height: 13.5rem;
+   height: 10rem;
+}
+ .submit{
+     width: 6.5rem;
+     font-size: 1.25rem;
+     font-family: 'Concert One', cursive;
+     margin-left: 90px;
+     background-color: #D19342;
+     border-radius: 4px;
+     color: white;
+     border: 3px black solid;
+ }
+ .submit:hover{
+     border-color: rgb(143, 143, 143);
+     cursor: pointer;
+     background-color: #f5a741;
+ }
+
+ @media (max-width:900px) {
+    .contact_form{
+        height: 45%;
+        margin-left:16%;
+        align-self: center;
+    }
+   .group{
+       flex-direction: column;
+       margin-bottom: 14px;
+       
+   }
+   label{
+       margin-bottom: 10px;
+   }
+   .group .inputname{
+    width: 80%;
+    margin-left: 19px;
+ }
+ .group .inputemail{
+    width: 87%;
+    margin-left: 18px;
+    
+ }
+ .group .inputmessage{
+     margin-left: 19px;
+     width: 90%;
+ }
+ .form_desc{
+     font-size: 1.25rem;
+     padding-left: 30px;
+ }
+ .Feedsvg_holder div{
+      transform: none;
+ }
+ .submit{
+    margin-left: 20px;
+ }
+}
+
+ /****some animations***/
+
+ @keyframes imagemove {
+    20%{
+        transform: translateY(100px);
+    }
+    40%{
+        transform: translateY(220px);
+    }
+    60%{
+        transform: translateY(100px);
+    }
+}
+@keyframes opmove {
+    10%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 0.4;
+    }
+    80%{
+        opacity: 0;
+    }
+}
+ /**/
        </style>
             <link href="layout.css" rel="stylesheet" />
         <script src="./slider.js" type="text/javascript"></script>
@@ -255,13 +478,42 @@ width: 90%;
             </ul>
             <p class="attributte">Icons designed By <a href="https://www.flaticon.com/authors/xnimrodx">xnimrodx</a> and <a href="https://www.flaticon.com/authors/xnimrodx">Pixel perfect</a>.</p>
         </div>
+        <div class="modal_container">
+        <section class="modal">
+          <div class="close_modal">
+            <span class="close_modal_container">
+                <svg version="1.1" id="Capa_1" width="25" height="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 496.096 496.096" xml:space="preserve">
+           <g>
+               <g>
+                   <path d="M259.41,247.998L493.754,13.654c3.123-3.124,3.123-8.188,0-11.312c-3.124-3.123-8.188-3.123-11.312,0L248.098,236.686
+                       L13.754,2.342C10.576-0.727,5.512-0.639,2.442,2.539c-2.994,3.1-2.994,8.015,0,11.115l234.344,234.344L2.442,482.342
+                       c-3.178,3.07-3.266,8.134-0.196,11.312s8.134,3.266,11.312,0.196c0.067-0.064,0.132-0.13,0.196-0.196L248.098,259.31
+                       l234.344,234.344c3.178,3.07,8.242,2.982,11.312-0.196c2.995-3.1,2.995-8.016,0-11.116L259.41,247.998z"/>
+               </g>
+           </g>
+           </svg>
+              </span>
+          </div>
+          <p class="modal_desc">Would You Like to downaload my resume in English or French ? </p>
+          <form class="modal_option">
+            <input type="radio"  title="english" name="language" value="english">
+            <label for="english">English </label>
+            <input type="radio"  title="french" name="language" value="french">
+            <label for="french">French </label>
+          </form>
+          <button class="download">
+              Download
+          </button>
+        </section>
+        </div>
         <header>
             <img class="header_logo" src="images/Yahya jamaldine.svg" alt="logo of Portfolio" />
             <nav class="header_nav">
-                <a href="./index.html">Home</a>
-                  <a href="./About.html">About</a>
-                  <a href="./work.html">Work</a>
-                <a href="./blogs.html">Blogs</a>
+                <a id="home" href="./index.html">Home</a>
+                  <a id="about" href="./About.html">About</a>
+                  <a id="work" href="./work.html">Work</a>
+                <a id="blog" href="./blogs.html">Blogs</a>
                 <span class="menu_icon_open">
                     <svg class="menu_svg" width="30" height="30" viewBox="0 -53 384 384" xmlns="http://www.w3.org/2000/svg">
                         <path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
@@ -278,19 +530,29 @@ width: 90%;
                     <p>oH !! you are hERE That’s GREAT, let me inTRODUCE MY SELF.</p>
                     <div class="slider">
                         <img class="arrow_left" src="images/1814083_arrow_left_icon 1.svg" />
-                        <div class="slider__intro">
+                        <div class="slider__intro">  
                             <p class="slider__intro_para">
-                                My name is Yahya, i’m A front end developer and a technical writer
-                                ,and I've got a bunch of tools at my desposale.
+                                I'm a fRONT-end developer with more than two years of experience 
+                                using JavaScript, HTML/CSS, PHP, MYSQL, Boostrap, jQuery and I forgot I'm a recent computer science graduate.
                             </p>
                             <p class="slider__intro_para">
-                                tates in, saepe temporibus dolorem voluptas dolor esse quidem tempore!
+                               I Do prefer using <mark>React</mark> with <mark> Redux </mark>, <mark> Next.js </mark>and<mark> REST API</mark> Whenever I decide to merge from pure coding
+                               , and as you've guessed, I'm familiar with <mark> React NativE </mark>, express.js, expo and firebase.
+                                
                             </p>
                             <p class="slider__intro_para">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi maiores totam placeat aperiam molestias 
-                                minus pariatur, veritatis, tenetur nobis aspernatur volup
+                                DURING MY CS CLASSES, WE'VE SPENT MOST OF THE TIME WORKING WITH OOP IN C++, SQL, 
+                                DATABASE MODELLING, AND DATABASE DESIGN USING UML AND MERISE.
+                            </p>   
+                            <p class="slider__intro_para">
+                                FURTHERMORE, I'VE WROTE MORE THAN 25 BLOG POSTS ABOUT WEB DEVELOPMENT IN MEDIUM, HACKER NOONE, AND DEV.TO,
+    
                             </p>
-                            
+                            <p class="slider__intro_para">
+                                 THERE'S MORE TO SAY YOU CAN CHECK ME ON <a class="twitter" href="https://twitter.com/yahya_jamaldine">TWITTER</a>,
+                                <a class="linkdin" href="https://twitter.com/yahya_jamaldine">LINKEDIN</a> OR BY EMAILING ME AT:
+                                <a href="mailto:yahya003jamaldine@gmail.com"><i>yahya003jamaldine@gmail.com</i></a>
+                            </p>     
                         </div>
                         <img class="arrow_right" src="images/1814083_arrow_left_icon 1.svg" />
                     </div>
@@ -319,10 +581,39 @@ width: 90%;
                     <img class="blob" src="images/blob_download.svg" />
                 </div>
             </div>
-            <div class="contact">
-
-            </div>
         </main>
+        <section class="contact">
+          <div class="contact_form">
+            <form id="my_form">
+                <p class="form_desc">Send a message to the beautiful human YAHYA</p>
+                <div class="group">
+                    <label for="name">Name:</label>
+                <input class="inputname" type="text" ole="textbox" placeholder="Name" pattern="[a-zA-Z][a-zA-Z\s]*"
+                title="Alphabetic and space only max of 30 characters"
+                maxlength="30" required>
+                </div>
+                <div class="group">
+                    <label for="email">Email:</label>
+                    <input class="inputemail" type="email" title="Email" role="textbox" placeholder="Email"  maxlength="50" required >
+                </div>
+                <div class="group">
+                    <label for="message">Message:</label>
+                    <textarea  class="inputmessage" title="Write you message here" placeholder="Write you message here" required></textarea>
+                </div>
+                <input type="submit" class="submit" value="Send">
+            </form>
+          </div>
+         <div class="Feedsvg_holder">
+          <div class="svg_holder">
+              <img class="my_damn_image" src="./images/bpgaRgVR_400x400.jpg">
+              <span class="svg_holder_cirle"></span>
+            <svg class="contact_svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 10 211.73 180">
+                <path id="bg" d="M39 153.73s31.57 19.71 77.26 15.21 90.18-37.23 90.36-72.33-10.51-57-35.28-63-50.22 17-76.31 20-60.12-15.88-78.32 2.51S-4.88 125.2 39 153.73z" style="transform-origin: 0px 0px 0px;" data-svg-origin="105.32421875 101.11328125" transform="matrix(1,0,0,1,0,1)">
+                </path>
+                </svg>
+            </div>
+         </div>
+        </section>
         <footer>
             <div class="footer_desc_container">
                 <p class="footer_desc">Developed by Yahya Jamaldine</p>
@@ -335,6 +626,13 @@ width: 90%;
             </div>
         </footer>
     </div>
+    <script type="text/javascript">
+        const openButton=document.querySelector('.menu_icon_open');
+       const closeButton=document.querySelector('.menu_icon_close >svg')
+         const menu=document.querySelector('.slid_menu');
+       openButton.addEventListener('click',()=>{menu.classList.toggle('slide_menu_closer')});
+      closeButton.addEventListener('click',()=>{menu.classList.toggle('slide_menu_closer')});
+        </script>
 </body>
 
 </html>

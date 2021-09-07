@@ -7,7 +7,6 @@
         <meta name="description" content="JavaScript wizard, chaotic good">
 <meta name="keyword" content="portfolio, javascript, developer">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-        <link href="layout.css" rel="stylesheet" />
         <style type="text/CSS">
          /*part of main*/
          
@@ -91,23 +90,27 @@
             transform: translateX(123px);
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
+        @media (max-width:1126px) {
+            .description__portfolio p{
+                white-space:normal;
+            }
+        }
       @media (max-width:627px) {
         .description__fade, .description__js{
             display: none;
         }
         .description__portfolio{
             margin-bottom: max(50%,20rem);
-            margin-left: 22%;
-            white-space:normal;
+            margin-left: 16%;
         }
         .description__portfolio p{
         
            font-weight: 400;
             letter-spacing: 0.4em;
-        
         }
       }
-        </style>
+     </style>
+               <link href="layout.css" rel="stylesheet" />
     </head>
     <body>
         <div class="container">
@@ -136,10 +139,10 @@
             <header>
                 <img class="header_logo" src="images/Yahya jamaldine.svg"  alt="logo of Portfolio" />
                  <nav class="header_nav">
-                  <a href="./index.html">Home</a>
-                  <a href="./About.html">About</a>
-                  <a href="./work.html">Work</a>
-                  <a href="./blogs.html">Blogs</a>
+                    <a id="home" href="./index.html">Home</a>
+                    <a id="about" href="./About.html">About</a>
+                    <a id="work" href="./work.html">Work</a>
+                  <a id="blog" href="./blogs.html">Blogs</a>
                   <span class="menu_icon_open">
                     <svg class="menu_svg" width="30" height="30" viewBox="0 -53 384 384" xmlns="http://www.w3.org/2000/svg">
                         <path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
