@@ -281,6 +281,7 @@ align-self: flex-end;
               background-color:hsla(360, 100%, 100%, 0.58);
               height: 3.25rem;
               width: 100vw;
+              align-self: flex-end;
           }
           .footer_desc_container{
               display: flex;

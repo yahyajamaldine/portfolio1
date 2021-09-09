@@ -18,10 +18,11 @@
     hold vectors to swap verticaly instead of horizontely*/
     flex-wrap: wrap;
     min-width: 320px;
+    overflow-y: hidden;
 }
  .desc__area{
 flex: 1 1 max(30ch,60%);
-height:40rem;
+height:42rem;
 }
 #about{
             cursor: pointer;
@@ -237,35 +238,18 @@ width: 90%;
             height: 2px;
             z-index: 0;
  }
- /**We'll use this one in all files*/
- @media (max-width:376px) {
-    body,header,footer{
-     width:415px;
-     overflow-x: scroll;
- }
-}
- @media (max-width:360px) {
-    .desc__vector div{
-      width: 90%;
-}   
-}
  
- @media (max-width:1038px) and (min-width:782px){
-    .desc__vector{
-        flex-direction: row;
-        height: 20rem;
-    }
- }
 
  .contact{
      grid-row: 3;
      grid-column: 1/6;
-     width: 100%;
+     width: 99%;
      display: flex;
     /*we have flex wrap so in samall device
     we want the the second elements that 
     hold vectors to swap verticaly instead of horizontely*/
     flex-wrap: wrap;
+    
  }
  .contact_form, .contact_form form {
 width: 90%;
@@ -312,6 +296,8 @@ width: 90%;
     width: 210px;
    height: 210px;
    border-radius: 122px;
+   position: relative;
+   top:2rem;
    z-index: 1;
    animation: imagemove 3s infinite linear;
  }
@@ -324,15 +310,17 @@ width: 90%;
      border-radius: 180px;
      height:210px ;
      width: 200px;
-     transform: translateY(180px) rotateX(-65deg);
+     transform: translateY(250px) rotateX(-65deg);
      z-index: 1;
      animation: opmove 3s infinite linear;
  }
- .contact_svg{
+
+.contact_svg{
     width: 22rem;
    height: 22rem;
-   transform: translateY(-70px);
+   transform: translateY(20px);
  }
+
 
  /***/
  form{
@@ -383,6 +371,7 @@ width: 90%;
      font-size: 1.25rem;
      font-family: 'Concert One', cursive;
      margin-left: 90px;
+     padding-bottom:4px;
      background-color: #D19342;
      border-radius: 4px;
      color: white;
@@ -399,6 +388,9 @@ width: 90%;
         height: 45%;
         margin-left:16%;
         align-self: center;
+    }
+    .contact_form form{
+        margin-top:33px;
     }
    .group{
        flex-direction: column;
@@ -432,18 +424,36 @@ width: 90%;
     margin-left: 20px;
  }
 }
-
+/**We'll use this one in all files*/
+@media (max-width:376px) {
+    body,header,footer{
+     width:415px;
+     overflow-x: scroll;
+ }
+}
+ @media (max-width:360px) {
+    .desc__vector div{
+      width: 90%;
+}   
+}
+ 
+ @media (max-width:1038px) and (min-width:782px){
+    .desc__vector{
+        flex-direction: row;
+        height: 20rem;
+    }
+}
  /****some animations***/
 
  @keyframes imagemove {
     20%{
-        transform: translateY(100px);
+        transform: translateY(200px);
     }
     40%{
-        transform: translateY(220px);
+        transform: translateY(300px);
     }
     60%{
-        transform: translateY(100px);
+        transform: translateY(200px);
     }
 }
 @keyframes opmove {
