@@ -18,7 +18,6 @@
     hold vectors to swap verticaly instead of horizontely*/
     flex-wrap: wrap;
     min-width: 320px;
-    overflow-y: hidden;
 }
  .desc__area{
 flex: 1 1 max(30ch,60%);
@@ -49,6 +48,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 .desc__main>p{
 font-family: 'Concert One', cursive;
 text-transform: uppercase;
+align-self: center;
 font-size:5ch;
 padding-left: 2rem;
 padding-right: .25rem;
@@ -76,11 +76,12 @@ justify-self: end;
 }
 .slider>img:hover{
 cursor: pointer;
-opacity: 0.50;
 scale: 0.95;
 transition: all 200ms linear;
 }
-
+.disbaled_arrow{
+  opacity: 0.5;
+}
 .slider__intro{
 width: 100%;
 height: 13rem;
@@ -92,14 +93,16 @@ display: flex;
 scroll-snap-type:  x mandatory;
 align-items: center;
 overflow: hidden;
+-webkit-overflow-scrolling: touch;
+
 }
 .slider__intro_para{
     font-family: 'Concert One', cursive;
    text-align: center;
    line-height: clamp(1ch,1.25rem,1.75rem);
-     padding:2.5rem;
-    text-transform: uppercase;
+   text-transform: uppercase;
    color: rgb(255, 255, 255);
+   padding-top: 40px;
    font-size:2.25ch;
     scroll-snap-align: center;
     background-color: rgb(120, 121, 121);
@@ -143,19 +146,21 @@ height: 2.25rem;
 background-color:white;
 list-style: none;
 justify-content: space-around;
-padding-left: 0;
+padding-inline: 3px;
 border-radius: 16px;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 transform: translateY(-20px);
 }
 .slider_number>*{
 align-self: center;
-height: 17px;
-width: 17px;
+height: 16px;
+width: 16px;
 background-color: #DCCDCD;
+transition: 300ms 100ms background linear;
 border-radius: 80px;
+margin-inline: 2px;
 }
-.slider_number>*:hover{
+.slider_black{
     background-color: black;
 }
 
@@ -323,6 +328,7 @@ width: 90%;
 
 
  /***/
+ /****styling forms***/
  form{
     background-color: hsla(360, 100%, 100%,1);
      display: flex;
@@ -382,6 +388,9 @@ width: 90%;
      cursor: pointer;
      background-color: #f5a741;
  }
+ input[name='language']:hover{
+     cursor: pointer;
+ }
 
  @media (max-width:900px) {
     .contact_form{
@@ -425,13 +434,6 @@ width: 90%;
     margin-left: 20px;
  }
 }
-/**We'll use this one in all files*/
-@media (max-width:376px) {
-    body,header,footer{
-     width:415px;
-     overflow-x: scroll;
- }
-}
  @media (max-width:360px) {
     .desc__vector div{
       width: 90%;
@@ -468,6 +470,7 @@ width: 90%;
         opacity: 0;
     }
 }
+
  /**/
        </style>
             <link href="layout.css" rel="stylesheet" />
@@ -553,19 +556,25 @@ width: 90%;
                         <div class="slider__intro">  
                             <p class="slider__intro_para">
                                 I'm a fRONT-end developer with more than two years of experience 
-                                using JavaScript, HTML/CSS, PHP, MYSQL, Boostrap, jQuery and I forgot I'm a recent computer science graduate.
+                                using JavaScript, HTML/CSS, PHP, MYSQL, Boostrap, jQuery. 
                             </p>
                             <p class="slider__intro_para">
-                               I Do prefer using <mark>React</mark> with <mark> Redux </mark>, <mark> Next.js </mark>and<mark> REST API</mark> Whenever I decide to merge from pure coding
-                               , and as you've guessed, I'm familiar with <mark> React NativE </mark>, express.js, expo and firebase.
-                                
+                               I Do prefer using <mark>React</mark> with <mark> Redux </mark>, <mark>Next.js</mark> and <mark>REST API</mark> Whenever I decide to merge from pure coding.
+                            </p>
+                            <p class="slider__intro_para">
+                             And as you've guessed, I'm familiar with <mark> React NativE </mark>, express.js, expo and firebase, currently 
+                             learining web3, Node.js, Typescript.
+                            </p>    
+                            </p>
+                            <p class="slider__intro_para">
+                                Oh! I forgot I'm a recent computer science graduate too.
                             </p>
                             <p class="slider__intro_para">
                                 DURING MY CS CLASSES, WE'VE SPENT MOST OF THE TIME WORKING WITH OOP IN C++, SQL, 
                                 DATABASE MODELLING, AND DATABASE DESIGN USING UML AND MERISE.
                             </p>   
                             <p class="slider__intro_para">
-                                FURTHERMORE, I'VE WROTE MORE THAN 25 BLOG POSTS ABOUT WEB DEVELOPMENT IN MEDIUM, HACKER NOONE, AND DEV.TO,
+                                FURTHERMORE, I'VE WROTE MORE THAN 25 BLOG POSTS ABOUT WEB DEVELOPMENT IN MEDIUM, HACKER NOONE, AND DEV.TO.
     
                             </p>
                             <p class="slider__intro_para">
@@ -578,11 +587,13 @@ width: 90%;
                     </div>
                     <div class="slider_number_co">
                         <ul class="slider_number">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li class="slider_circle"></li>
+                            <li class="slider_circle"></li>
+                            <li class="slider_circle"></li>
+                            <li class="slider_circle"></li>
+                            <li class="slider_circle"></li>
+                            <li class="slider_circle"></li>
+                            <li class="slider_circle"></li>
                         </ul>
                     </div>
                 </div>

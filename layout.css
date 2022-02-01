@@ -329,16 +329,6 @@ align-self: flex-end;
           }
      /**common css**/
 
-     @media (max-width:360px) {
-      body{
-          overflow-x: scroll;
-          width: 415px;
-      }
-      header,footer{
-          width: 100%;
-      }
-      
-  }  
 
 
 @media (max-width:769px) {
@@ -361,13 +351,15 @@ align-self: flex-end;
       display: flex;
   }
 .desc__main>p{
-  font-size: 4.5ch;
+  font-size: 4ch;
 }
 
 .slider__intro_para{
   margin-left: 3%;
  padding: 5%;
  font-size:2ch;
+ padding-top: 25px;
+ line-height: 20px;
 }
 .footer_desc{
          position: fixed;
@@ -386,7 +378,7 @@ align-self: flex-end;
     justify-content: flex-start;
       transform: translateX(-9%);}
 }
-@media (max-width:408px) {
+@media (max-width:410px) {
   body,header,footer{
    width:415px;
    overflow-x: scroll;
