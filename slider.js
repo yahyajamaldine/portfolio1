@@ -83,7 +83,7 @@ active_circle[0].classList.add('slider_black');
          if(language){
           const link=language.value=="french"
           ?'https://drive.google.com/file/d/1tMvoYDJ-mrhKn9UZ9BjiUQ_-k2Hn8NdA/view?usp=sharing'
-          :'https://drive.google.com/file/d/1MXDgV12WDxfBUIdOnQfuo_yxRrYVrC51/view?usp=sharing';
+          :'https://drive.google.com/file/d/1iezHLqSDXw7cK5BrY4z3o7RnbkFO9XMS/view?usp=sharing';
           window.open(link);
           [modal,modalwindow].map(item=>item.classList.toggle('modal_closer'));
          }
