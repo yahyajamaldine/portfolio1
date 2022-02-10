@@ -1,4 +1,3 @@
-onload=()=>{
 /**item_count will track which paragraphe is active so it activate its slider_circle  */
 let item_count=0;
 /***the slider_circle */
@@ -102,4 +101,3 @@ const my_form=document.getElementById('my_form');
      alert("The email functionality is not ready for use.");
 
     });
-}
