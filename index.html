@@ -121,7 +121,8 @@
         }
       }
      </style>
-               <link href="layout.css" rel="stylesheet" />
+       <link href="layout.css" rel="stylesheet" />
+       <script src="./index.js" type="text/javascript"></script>
     </head>
     <body>
         <div class="container">
@@ -174,10 +175,12 @@
                  <p>
                    You may be wandring way I used this kind of background images ?<br>
                    Well I live in place where we almost compte on farme to feed us, so I liked the idea of using a plantation image.  
-                 </p></div>
+                 </p>
+                </div>
+
                <div class="description__js">
                 <p>
-                   By the way I lovE JAVASCRIPT
+                   Outside of coding, I play 🏀
                 </p> 
                </div>
             </main>
@@ -186,19 +189,12 @@
                     <p class="footer_desc">Developed by Yahya Jamaldine</p>
                 </div> 
                     <div class="footer_nav">
-                          <img src="images/logo/iconmonstr-twitter-3 (1) 1.svg" alt="Twitter-logo">
-                          <img src="images/logo/iconmonstr-github-1.svg" alt="Github-logo">
-                          <img src="images/logo/iconmonstr-linkedin-4.svg" alt="Linkdin-logo">
-                          <img src="images/logo/iconmonstr-medium-4.svg" alt="Medium-logo" >
+                          <img id="twitter" src="images/logo/iconmonstr-twitter-3 (1) 1.svg" alt="Twitter-logo">
+                          <img id="github" src="images/logo/iconmonstr-github-1.svg" alt="Github-logo">
+                          <img id="linkdin" src="images/logo/iconmonstr-linkedin-4.svg" alt="Linkdin-logo">
+                          <img id="medium" src="images/logo/iconmonstr-medium-4.svg" alt="Medium-logo" >
                     </div>
              </footer>
         </div>
-        <script type="text/javascript">
-        const openButton=document.querySelector('.menu_icon_open');
-       const closeButton=document.querySelector('.menu_icon_close >svg')
-         const menu=document.querySelector('.slid_menu');
-       openButton.addEventListener('click',()=>{menu.classList.toggle('slide_menu_closer')});
-      closeButton.addEventListener('click',()=>{menu.classList.toggle('slide_menu_closer')});
-        </script>
     </body>
 </html>
