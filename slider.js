@@ -98,6 +98,6 @@ const my_form=document.getElementById('my_form');
     my_form.addEventListener("submit",function(event){
     event.preventDefault()
      const va=document.querySelector(".inputemail").value;
-     alert("The email functionality is not ready for use.");
+     alert("The email functionality is not ready yet.");
 
     });
