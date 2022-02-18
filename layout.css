@@ -72,7 +72,7 @@ body{
   .header_nav a:visited:nth-child(odd){
     color:var(--header-black-color);
 }
-  .header_nav a:hover{
+  /*.header_nav a:hover{
      text-decoration:underline;
      cursor:pointer;
      position: relative;
@@ -81,7 +81,7 @@ body{
      font-size: 1.5rem;
      font-weight: 900;
      transition: all .6s ;
-  }
+  }*/
   
   .header_logo{
       grid-column-start: 1;
